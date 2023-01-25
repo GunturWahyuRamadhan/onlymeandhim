@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<meta charset='UTF-8' />
+<meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport' />
+<meta content='IE=edge' http-equiv='X-UA-Compatible' />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+<script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+<link href="https://feeldreams.github.io/gakerasa/style.css" rel="stylesheet" type="text/css" />
+<script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
+
+<head>
+    <title>Spesial Dari Aku</title>
+    <link rel="icon" type="image/x-icon" href="https://www.palingit.com/favicon.ico">
+    <meta name="description" content="HTML Replit Coding">
+
+</head>
+<style>
+     :root {
+        --ukuran-teks: 16px;
+        --gaya-font: 'Nunito Sans', sans-serif;
+        --gaya-font3: 'Nerko One', cursive;
+    }
+</style>
+
+<body>
+
+    <!-- Ganti Audio di sini -->
+    <audio src="https://feeldreams.github.io/stayxright.mp3" id="linkmp3" class="sembunyi"></audio>
+
+    <div id="bodyblur"><img src="" id="wallpaper" /></div>
+
+    <div id='Content'>
+
+        <div id="ftAwal">
+            <!-- Stiker Pembuka -->
+            <img src="https://feeldreams.github.io/heart.png" id="ftoAwal" />
+        </div>
+
+        <div id="loveIn">
+            <!-- Tombol LOVE --><label class='lovein'>❤️</label>
+        </div>
+        <p id="ket">Sentuh LOVEnya!</p>
+
+        <div class="kumpulan">
+            <!-- Kumpulan Background -->
+            <img src="Girlbr.jpg" id="wallpaper1" />
+            <img src="5.jpg" id="wallpaper2" />
+            <img src="4.jpg" id="wallpaper3" />
+            <img src="1.jpg" id="wallpaper4" />
+            <img src="7.jpg" id="wallpaper5" />
+            <img src="11.jpg" id="wallpaper6" />
+            <img src="maps.jpg" id="wallpaper7" />
+            <img src="8.jpg" id="wallpaper8" />
+
+            <!-- Foto/Stiker Akhir -->
+            <img src="https://feeldreams.github.io/heart.png" id="ftoAkhir" />
+        </div>
+
+        <div>
+            <blockquote id='bq'>
+                <p id="kalimat" style="text-align:center"></p>
+            </blockquote>
+        </div>
+
+        <!-- Tombol Kirim Pesan -->
+        <div id="Tombol">
+            <a id="By">&#128140; Balas</a>
+        </div>
+
+    </div>
+
+    <!-- Jangan Edit Bagian Ini -->
+    <script>
+        const body = document.querySelector("body");
+        const swalst = Swal.mixin({
+            timer: 2500,
+            allowOutsideClick: false,
+            showConfirmButton: false,
+            timerProgressBar: true,
+            imageHeight: 90,
+        });
+        audio = new Audio('' + linkmp3.src);
+        ftganti = 0;
+        fungsi = 0;
+        fungsiAwal = 0;
+
+        function berjatuhan() {
+            const heart = document.createElement("div");
+            heart.className = "fas fa-heart-broken";
+            heart.style.left = (Math.random() * 90) + "vw";
+            heart.style.animationDuration = (Math.random() * 3) + 2 + "s";
+            body.appendChild(heart);
+        }
+        setInterval(function name(params) {
+            var heartArr = document.querySelectorAll(".fa-heart-broken");
+            if (heartArr.length > 100) {
+                heartArr[0].remove()
+            }
+        }, 100);
+        Content.style = "opacity:1;margin-top:14vh";
+        const swals = Swal.mixin({
+            allowOutsideClick: false,
+            cancelButtonColor: '#FF0040',
+            imageHeight: 80,
+        });
+        const inip = [];
+        const iniwp = [];
+        iden = 1;
+        iniwp[1] = wallpaper1.src;
+        wallpaper.src = iniwp[1];
+        iniwp[2] = wallpaper2.src;
+        iniwp[3] = wallpaper3.src;
+        iniwp[4] = wallpaper4.src;
+        iniwp[5] = wallpaper5.src;
+        iniwp[6] = wallpaper6.src;
+        iniwp[7] = wallpaper7.src;
+        iniwp[8] = wallpaper8.src;
+
+        inip[1] = "Happy Birthday Erni Fidayanti <i>lost contact</i>";
+        inip[2] = "aku gatau kamu<br>buka ini atau engga,";
+        inip[3] = "tapi aku hanya<br>ingin mengatakan,";
+        inip[4] = "terimakasih sudah<br>menemaniku selama ini";
+        inip[5] = "aku sangat beruntung<br>bisa bertemu denganmu";
+        inip[6] = "tapi jika menurutmu";
+        inip[7] = "aku orang terburuk<br>yang kamu temui";
+        inip[8] = "<span style='font-family:var(--gaya-font3);font-size:19px !important'>Aku minta maaf ツ</span>";
+
+        totalPesan = 8; //Input total pesan (slide) di sini ya!
+
+        function waktumuncul() {
+            setTimeout(kalimatakhir, 4100);
+            setTimeout(kalimatakhir, 7200);
+            setTimeout(kalimatakhir, 9900);
+            setTimeout(kalimatakhir, 11800);
+            setTimeout(kalimatakhir, 13300);
+            setTimeout(kalimatakhir, 15900);
+            setTimeout(kalimatakhir, 18100);
+            setTimeout(kalimatakhir, 21300);
+        }
+    </script>
+    <script src="https://feeldreams.github.io/gakerasa/script.js"></script>
+    <!-- Sampai Sini -->
+</body>
+
+</html>
